@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+    <script src="../lib/webextension-polyfill/browser-polyfill.js"></script>
+</head>
+<body>
+<div id="popup-content">
+    <div class="checkbox-container">
+        <div class="switch">
+            <input id="eq-enabled-checkbox" type="checkbox" title="Enable/Disable">
+            <label for="eq-enabled-checkbox"></label>
+        </div>
+    </div>
+    <div class="hz-label">Hz</div>
+    <div id="eq-bank">
+        <!-- EQ sliders are injected here -->
+    </div>
+    <div id="gain-bank">
+        <!-- EQ gain values are injected here -->
+    </div>
+    <div class="gain-label">Gain</div>
+    <div id="preset-buttons-wrapper" >
+        <button id="load-preset-button">Load Preset</button>
+        <button id="save-preset-button">Save As Preset</button>
+    </div>
+    <div id="preset-name-input" class="hidden">
+        <input id="name-input" type="text" title="Save Preset" placeholder="Enter preset name...">
+        <button id="save-button" disabled>SAVE</button>
+    </div>
+    <div id="preset-select-container" class="hidden">
+        <select id="preset-select" title="Select Preset">
+            <option value=""></option>
+            <option value="test">test</option>
+            <option value="foo">foo</option>
+        </select>
+    </div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
